@@ -1,124 +1,124 @@
 image theoblink:
-    "الـ sprites/theo/eyes_open.png"
+    "sprites/theo/eyes_open.png"
     5.0
-    "الـ\"سبريتس\"/الـ\"عيون\"_النصف.png"
+    "sprites/theo/eyes_half.png"
     0.1
-    "الـ (sprites/theo/eyes_closed).png"
+    "sprites/theo/eyes_closed.png"
     0.5
-    "الـ\"سبريتس\"/الـ\"عيون\"_النصف.png"
+    "sprites/theo/eyes_half.png"
     0.1
     repeat
 
 layeredimage theo1:
     always:
-        "الـ sprites/theo/theobase1.png"
+        "sprites/theo/theobase1.png"
     attribute sweat:
-        "السبيتات/التياو/العرق.png"
+        "sprites/theo/sweat.png"
     group eyes:
         attribute close_happy:
-            "الـ (سبريتس) والـ (ثيو) والـ (عيون)"
+            "sprites/theo/eyes_closedhappy.png"
         attribute close:
-            "الـ (sprites/theo/eyes_closed).png"
+            "sprites/theo/eyes_closed.png"
         attribute half_close:
-            "الـ\"سبريتس\"/الـ\"عيون\"_النصف.png"
+            "sprites/theo/eyes_half.png"
         attribute picek:
-            "الـ (sprites/theo/eyes_picek)"
+            "sprites/theo/eyes_picek.png"
         attribute surprised:
-            "مُتفاجأة."
+            "sprites/theo/eyes_surprised.png"
         attribute blink default:
-            "الارتباط"
+            "theoblink"
     group eyebrows:
         attribute neutral:
-            "الـ sprites/theo/eyebrow_neutral.png"
+            "sprites/theo/eyebrow_neutral.png"
         attribute angry default: 
-            "الـ sprites/theo/eyebrow_angry.png"
+            "sprites/theo/eyebrow_angry.png"
         attribute sad: 
-            "الـ (sprites/theo/eyebrow_sad.png)"
+            "sprites/theo/eyebrow_sad.png"
     group mouth:
         attribute smile:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الفم_الابتسامة"
+            "sprites/theo/mouth_smile.png"
         attribute shut default:
-            "الـ (sprites/theo/mouth_closed).png"
+            "sprites/theo/mouth_closed.png"
         attribute open:
-            "الـ (sprites/theo/mouth_open.png)"
+            "sprites/theo/mouth_open.png"
         attribute shout:
-            "الـ (sprites/theo/mouth_shout).png"
+            "sprites/theo/mouth_shout.png"
         attribute pain:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الـ\"فم_الألم\""
+            "sprites/theo/mouth_pain.png"
 
 layeredimage theo2:
     always:
-        "الـ sprites/theo/theobase2.png"
+        "sprites/theo/theobase2.png"
     attribute sweat:
-        "السبيتات/التياو/العرق.png"
+        "sprites/theo/sweat.png"
     group eyes:
         attribute close_happy:
-            "الـ (سبريتس) والـ (ثيو) والـ (عيون)"
+            "sprites/theo/eyes_closedhappy.png"
         attribute close:
-            "الـ (sprites/theo/eyes_closed).png"
+            "sprites/theo/eyes_closed.png"
         attribute half_close:
-            "الـ\"سبريتس\"/الـ\"عيون\"_النصف.png"
+            "sprites/theo/eyes_half.png"
         attribute picek:
-            "الـ (sprites/theo/eyes_picek)"
+            "sprites/theo/eyes_picek.png"
         attribute surprised:
-            "مُتفاجأة."     
+            "sprites/theo/eyes_surprised.png"     
         attribute blink default:
-            "الارتباط"
+            "theoblink"
     group eyebrows:
         attribute neutral:
-            "الـ sprites/theo/eyebrow_neutral.png"
+            "sprites/theo/eyebrow_neutral.png"
         attribute angry default: 
-            "الـ sprites/theo/eyebrow_angry.png"
+            "sprites/theo/eyebrow_angry.png"
         attribute sad: 
-            "الـ (sprites/theo/eyebrow_sad.png)"
+            "sprites/theo/eyebrow_sad.png"
     group mouth:
         attribute smile:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الفم_الابتسامة"
+            "sprites/theo/mouth_smile.png"
         attribute shut default:
-            "الـ (sprites/theo/mouth_closed).png"
+            "sprites/theo/mouth_closed.png"
         attribute open:
-            "الـ (sprites/theo/mouth_open.png)"
+            "sprites/theo/mouth_open.png"
         attribute shout:
-            "الـ (sprites/theo/mouth_shout).png"
+            "sprites/theo/mouth_shout.png"
         attribute pain:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الـ\"فم_الألم\""
+            "sprites/theo/mouth_pain.png"
 
 layeredimage theo3:
     always:
-        "الـ sprites/theo/theobase3.png"
+        "sprites/theo/theobase3.png"
     attribute sweat:
-        "السبيتات/التياو/العرق.png"
+        "sprites/theo/sweat.png"
     group eyes:
         attribute half_close:
-            "الـ\"سبريتس\"/الـ\"عيون\"_النصف.png"
+            "sprites/theo/eyes_half.png"
         attribute picek:
-            "الـ (sprites/theo/eyes_picek)"
+            "sprites/theo/eyes_picek.png"
         attribute surprised:
-            "مُتفاجأة."    
+            "sprites/theo/eyes_surprised.png"    
         attribute close_happy:
-            "الـ (سبريتس) والـ (ثيو) والـ (عيون)"
+            "sprites/theo/eyes_closedhappy.png"
         attribute close:
-            "الـ (sprites/theo/eyes_closed).png"    
+            "sprites/theo/eyes_closed.png"    
         attribute blink:
-            "الارتباط"
+            "theoblink"
     group eyebrows:
         attribute neutral:
-            "الـ sprites/theo/eyebrow_neutral.png"
+            "sprites/theo/eyebrow_neutral.png"
         attribute angry default: 
-            "الـ sprites/theo/eyebrow_angry.png"
+            "sprites/theo/eyebrow_angry.png"
         attribute sad: 
-            "الـ (sprites/theo/eyebrow_sad.png)"
+            "sprites/theo/eyebrow_sad.png"
     group mouth:
         attribute smile:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الفم_الابتسامة"
+            "sprites/theo/mouth_smile.png"
         attribute shut default:
-            "الـ (sprites/theo/mouth_closed).png"
+            "sprites/theo/mouth_closed.png"
         attribute open:
-            "الـ (sprites/theo/mouth_open.png)"
+            "sprites/theo/mouth_open.png"
         attribute shout:
-            "الـ (sprites/theo/mouth_shout).png"
+            "sprites/theo/mouth_shout.png"
         attribute pain:
-            "الـ\"سبريتس\"/الـ\"ثيو\"/الـ\"فم_الألم\""
+            "sprites/theo/mouth_pain.png"
     attribute hand default:
-        "الـ \"سبريتس\" و \"ثيو\" و \"ثيو\""
+        "sprites/theo/theooverlay3.png"
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

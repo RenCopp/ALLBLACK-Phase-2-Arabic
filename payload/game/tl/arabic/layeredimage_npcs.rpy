@@ -1,17 +1,17 @@
 layeredimage thug:
     always:
-        "الـ (سبريتس) والـ (ثغ) والـ (ثغ)"
+        "sprites/thug/thug base.png"
     attribute sweat:
-        "السبيتات/الثغ/العرق"
+        "sprites/thug/sweat.png"
     attribute knife:
-        "الـ (سبريتس) / الـ (ثغ) / السكين"
+        "sprites/thug/knife.png"
     group mouth:
         attribute shut default:
-            "الـ (سبريتس) / (ثغ) / (الفم)"    
+            "sprites/thug/mouth_shut.png"    
         attribute sigh:
-            "الـ (سبريتس) / الـ (ثغ) / الفم"       
+            "sprites/thug/mouth_sigh.png"       
         attribute open:
-            "الـ\"سبريتس\"/الـ\"ثغ\"/الـ\"فم\""       
+            "sprites/thug/mouth_open.png"       
 
 layeredimage thug_blur:
     always:
