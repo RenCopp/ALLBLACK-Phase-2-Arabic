@@ -140,3 +140,31 @@ init -98 python:
     if "allblack_arabic_language_button" not in config.overlay_screens:
         config.overlay_screens.append("allblack_arabic_language_button")
 
+# Final style guard: the original project defines the say styles in the
+# generated GUI file, and those definitions can override RTL alignment when
+# the translated screen is loaded. Apply the Arabic font and text-box layout
+# after all GUI definitions have been read.
+init -97 python:
+    _allblack_font_guard = FontGroup() \
+        .add("NotoSansArabic.ttf", 0x0020, 0x007e) \
+        .add("NotoSansArabic.ttf", 0x0600, 0x06ff) \
+        .add("NotoSansArabic.ttf", 0x0750, 0x077f) \
+        .add("NotoSansArabic.ttf", 0x08a0, 0x08ff) \
+        .add("NotoSansArabic.ttf", 0xfb50, 0xfdff) \
+        .add("NotoSansArabic.ttf", 0xfe70, 0xfeff) \
+        .add("DejaVuSans.ttf", None, None)
+
+    style.say_dialogue.font = _allblack_font_guard
+    style.say_dialogue.language = "unicode"
+    style.say_dialogue.xalign = 1.0
+    style.say_dialogue.text_align = 1.0
+    style.say_dialogue.layout = "subtitle"
+    style.say_label.font = _allblack_font_guard
+    style.say_label.language = "unicode"
+    style.say_label.xalign = 1.0
+    style.say_label.text_align = 1.0
+    style.nvl_dialogue.font = _allblack_font_guard
+    style.nvl_dialogue.language = "unicode"
+    style.nvl_dialogue.xalign = 1.0
+    style.nvl_dialogue.text_align = 1.0
+
