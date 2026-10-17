@@ -146,7 +146,9 @@ init -98 python:
 # after all GUI definitions have been read.
 init -97 python:
     _allblack_font_guard = FontGroup() \
-        .add("NotoSansArabic.ttf", 0x0020, 0x007e) \
+        .add("NotoSansArabic.ttf", 0x0020, 0x0021) \
+        .add("NotoSansArabic.ttf", 0x002c, 0x002e) \
+        .add("NotoSansArabic.ttf", 0x0030, 0x003a) \
         .add("NotoSansArabic.ttf", 0x0600, 0x06ff) \
         .add("NotoSansArabic.ttf", 0x0750, 0x077f) \
         .add("NotoSansArabic.ttf", 0x08a0, 0x08ff) \
@@ -156,12 +158,17 @@ init -97 python:
 
     style.say_dialogue.font = _allblack_font_guard
     style.say_dialogue.language = "unicode"
-    style.say_dialogue.xalign = 1.0
+    # Keep the dialogue widget anchored inside its original 60px inset and
+    # align only the glyphs within its 1700px text area. Setting xalign on the
+    # widget itself moved its right anchor to x=60 and clipped almost all text.
+    style.say_dialogue.xalign = 0.0
+    style.say_dialogue.xanchor = 0.0
     style.say_dialogue.text_align = 1.0
     style.say_dialogue.layout = "subtitle"
     style.say_label.font = _allblack_font_guard
     style.say_label.language = "unicode"
-    style.say_label.xalign = 1.0
+    style.say_label.xalign = 0.0
+    style.say_label.xanchor = 0.0
     style.say_label.text_align = 1.0
     style.nvl_dialogue.font = _allblack_font_guard
     style.nvl_dialogue.language = "unicode"
