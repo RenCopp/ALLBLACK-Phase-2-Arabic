@@ -1508,7 +1508,7 @@ style window:
 
 style radio_button:
     variant "صغيرة"
-    foreground "الجهاز / الهاتف / الزر / الراديو_[prefix_]الدرجة الأولى"
+    foreground "gui/phone/button/radio_[prefix_]foreground.png"
 
 style check_button:
     variant "صغيرة"
