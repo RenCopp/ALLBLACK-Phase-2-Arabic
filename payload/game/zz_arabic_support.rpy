@@ -5,6 +5,10 @@
 # another language to be selected for the current session.
 init -99 python:
     config.language = "arabic"
+    # Apply RTL immediately on startup. The language-change callback runs
+    # only after the first interaction, which leaves the opening text left-
+    # aligned when Arabic is selected as the default language.
+    config.rtl = True
 
     # Ren'Py 7.3 can leave text fragments following inline tags (for example
     # {w=1}) as UTF-8 byte strings. Its bidi extension accepts Unicode only,
