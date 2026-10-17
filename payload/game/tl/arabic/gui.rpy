@@ -136,7 +136,7 @@ define gui.dialogue_width = 1700
 
 
 
-define gui.dialogue_text_xalign = 0.0
+define gui.dialogue_text_xalign = 1.0
 
 
 
@@ -351,7 +351,7 @@ define gui.history_name_xalign = 1.0
 define gui.history_text_xpos = 420
 define gui.history_text_ypos = 2
 define gui.history_text_width = 1100
-define gui.history_text_xalign = 0.0
+define gui.history_text_xalign = 1.0
 
 
 
@@ -384,18 +384,18 @@ define gui.nvl_name_xalign = 1.0
 define gui.nvl_text_xpos = 675
 define gui.nvl_text_ypos = 12
 define gui.nvl_text_width = 885
-define gui.nvl_text_xalign = 0.0
+define gui.nvl_text_xalign = 1.0
 
 
 
 define gui.nvl_thought_xpos = 360
 define gui.nvl_thought_ypos = 0
 define gui.nvl_thought_width = 1170
-define gui.nvl_thought_xalign = 0.0
+define gui.nvl_thought_xalign = 1.0
 
 
 define gui.nvl_button_xpos = 675
-define gui.nvl_button_xalign = 0.0
+define gui.nvl_button_xalign = 1.0
 
 
 

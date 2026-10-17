@@ -63,12 +63,12 @@ style vscrollbar:
 style slider:
     ysize gui.slider_size
     base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/horizontal_[prefix_]الإبهام"
+    thumb "gui/slider/horizontal_[prefix_]thumb.png"
 
 style vslider:
     xsize gui.slider_size
     base_bar Frame("gui/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/slider/vertical_[prefix_]الإبهام"
+    thumb "gui/slider/vertical_[prefix_]thumb.png"
 
 
 style frame:
@@ -96,7 +96,7 @@ style frame:
 
 
 screen say(who, what):
-    style_prefix "قولي"
+    style_prefix "say"
 
     window:
         id "النافذة"
@@ -174,7 +174,7 @@ style say_dialogue:
 
 
 screen input(prompt):
-    style_prefix "المدخلات"
+    style_prefix "input"
 
     window:
 
@@ -207,7 +207,7 @@ style input:
 
 
 screen choice(items):
-    style_prefix "الاختيار"
+    style_prefix "choice"
 
     vbox:
         for i in items:
@@ -295,7 +295,7 @@ init python:
 screen navigation():
 
     vbox:
-        style_prefix "الملاحة"
+        style_prefix "navigation"
 
 
         xpos gui.navigation_xpos
@@ -368,7 +368,7 @@ screen main_menu():
 
 
 
-    style_prefix "القائمة الرئيسية"
+    style_prefix "main_menu"
 
     add gui.main_menu_background
     add "gui/main_menu/title.png" xoffset 300 at main_menu_title
@@ -458,7 +458,7 @@ transform main_menu_title:
 
 screen game_menu(title, scroll=None, yinitial=0.0):
 
-    style_prefix "اللعبة_قائمة"
+    style_prefix "game_menu"
 
     if main_menu:
         add gui.main_menu_background
@@ -608,7 +608,7 @@ screen about():
 
     use game_menu(_("About"), scroll="viewport"):
 
-        style_prefix "حول"
+        style_prefix "about"
 
         vbox:
 
@@ -683,7 +683,7 @@ screen file_slots(title):
 
 
             grid gui.file_slot_cols gui.file_slot_rows:
-                style_prefix "فتحة"
+                style_prefix "file_slot"
 
                 xalign 0.5
                 yalign 0.4
@@ -711,7 +711,7 @@ screen file_slots(title):
 
 
             hbox:
-                style_prefix "الصفحة"
+                style_prefix "page"
 
                 xalign 0.5
                 yalign 1.15
@@ -786,7 +786,7 @@ screen preferences():
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
-                        style_prefix "الإذاعة"
+                        style_prefix "radio"
                         label _("Display")
                         textbutton _("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
@@ -799,14 +799,14 @@ screen preferences():
 
 
                 vbox:
-                    style_prefix "التحقق"
+                    style_prefix "check"
                     label _("Skip")
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
                 vbox:
-                    style_prefix "التحقق"
+                    style_prefix "check"
                     label _("Language")
                     textbutton "English" action Language(None)
 
@@ -816,7 +816,7 @@ screen preferences():
             null height (3 * gui.pref_spacing)
 
             hbox:
-                style_prefix "سلايدر"
+                style_prefix "slider"
                 box_wrap True
 
                 vbox:
@@ -906,7 +906,7 @@ style radio_vbox:
 
 style radio_button:
     properties gui.button_properties("radio_button")
-    foreground "gui/button/radio_[prefix_]الدرجة الأولى"
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
@@ -916,7 +916,7 @@ style check_vbox:
 
 style check_button:
     properties gui.button_properties("check_button")
-    foreground "gui/button/check_[prefix_]الدرجة الأولى"
+    foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
@@ -953,7 +953,7 @@ screen history():
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
 
-        style_prefix "التاريخ"
+        style_prefix "history"
 
         for h in _history_list:
 
@@ -1046,7 +1046,7 @@ screen help():
 
     use game_menu(_("Help"), scroll="viewport"):
 
-        style_prefix "المساعدة"
+        style_prefix "help"
 
         vbox:
             spacing 23
@@ -1210,7 +1210,7 @@ screen confirm(message, yes_action, no_action):
 
     zorder 200
 
-    style_prefix "تأكيد"
+    style_prefix "confirm"
 
     add "gui/overlay/confirm.png"
 
@@ -1269,7 +1269,7 @@ style confirm_button_text:
 screen skip_indicator():
 
     zorder 100
-    style_prefix "القفز"
+    style_prefix "skip"
 
     frame:
 
@@ -1325,7 +1325,7 @@ style skip_triangle:
 screen notify(message):
 
     zorder 100
-    style_prefix "الإخطار"
+    style_prefix "notify"
 
     frame at notify_appear:
         text "[message!tq]"
@@ -1491,7 +1491,7 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "بسرعة"
+            style_prefix "quick"
 
             xalign 0.5
             yalign 1.0
@@ -1512,7 +1512,7 @@ style radio_button:
 
 style check_button:
     variant "صغيرة"
-    foreground "gui/telephone/button/check_[prefix_]الدرجة الأولى"
+    foreground "gui/phone/button/check_[prefix_]foreground.png"
 
 style nvl_window:
     variant "صغيرة"
@@ -1566,13 +1566,13 @@ style slider:
     variant "صغيرة"
     ysize gui.slider_size
     base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/horizontal_[prefix_]الإبهام"
+    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
 
 style vslider:
     variant "صغيرة"
     xsize gui.slider_size
     base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
-    thumb "gui/phone/slider/vertical_[prefix_]الإبهام"
+    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
 
 style slider_pref_vbox:
     variant "صغيرة"
